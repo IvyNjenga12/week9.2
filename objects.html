@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>JavaScript Object Properties</title>
 </head>
 <body>
-
-    <h2>Car Details</h2>
-    <p id="output"></p>
-
-    <script>
-        let car = {
-            make: "Toyota",
-            model: "Corolla",
-            color: "Red",
-            speed: 120
+    <h2>Types of Object Properties</h2>
+    
+    <h3>1. Data Properties</h3>
+    <p>These properties hold values.</p>
+    <pre>
+        let laptop = {
+            brand: "Dell",
+            price: 800,
+            isNew: true
         };
 
-        // Display the object properties on the webpage
-        document.getElementById("output").innerHTML = 
-            "Make: " + car.make + "<br>" +
-            "Model: " + car.model + "<br>" +
-            "Color: " + car.color + "<br>" +
-            "Speed: " + car.speed + " km/h";
-    </script>
+        console.log(laptop.brand); // Dell
+        console.log(laptop.price); // 800
+        console.log(laptop.isNew); // true
+    </pre>
 
+    <h3>2. Computed Properties (Dynamic Properties)</h3>
+    <p>Properties can be set dynamically using square brackets.</p>
+    <pre>
+        let key = "color";
+        let bike = {
+            brand: "Yamaha",
+            [key]: "Black"
+        };
+
+        console.log(bike.color); // Black
+    </pre>
+
+    <script>
+        // Data Properties
+        let laptop = {
+            brand: "Dell",
+            price: 800,
+            isNew: true
+        };
+
+        console.log(laptop.brand); // Dell
+        console.log(laptop.price); // 800
+        console.log(laptop.isNew); // true
+
+        // Computed Properties (Dynamic Properties)
+        let key = "color";
+        let bike = {
+            brand: "Yamaha",
+            [key]: "Black"
+        };
+
+        console.log(bike.color); // Black
+    </script>
 </body>
 </html>
