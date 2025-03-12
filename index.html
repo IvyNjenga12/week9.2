@@ -4,31 +4,12 @@
     <title>JavaScript Object Properties</title>
 </head>
 <body>
-    <h2>Types of Object Properties</h2>
-    
-    <h3>1. Data Properties</h3>
-    <p>These properties hold values.</p>
-    <pre>
-        let laptop = {
-            brand: "Dell",
-            price: 800,
-            isNew: true
-        };
-    </pre>
-    <p><strong>Output:</strong></p>
-    <p id="laptopOutput"></p>
 
-    <h3>2. Computed Properties (Dynamic Properties)</h3>
-    <p>Properties can be set dynamically using square brackets.</p>
-    <pre>
-        let key = "color";
-        let bike = {
-            brand: "Yamaha",
-            [key]: "Black"
-        };
-    </pre>
-    <p><strong>Output:</strong></p>
-    <p id="bikeOutput"></p>
+    <h2>Data Properties</h2>
+    <div id="laptopOutput"></div>
+
+    <h2>Computed Properties</h2>
+    <div id="bikeOutput"></div>
 
     <script>
         // Data Properties
@@ -57,5 +38,6 @@
 
         console.log(bike.color); // Black
     </script>
+
 </body>
 </html>
