@@ -4,13 +4,11 @@
     <title>JavaScript Object Properties</title>
 </head>
 <body>
-
-    <h2>Data Properties</h2>
     <div id="laptopOutput"></div>
-
-    <h2>Computed Properties</h2>
     <div id="bikeOutput"></div>
-
+    <div id="studentOutput"></div>
+    <div id="personOutput"></div>
+    
     <script>
         // Data Properties
         let laptop = {
@@ -37,7 +35,37 @@
             `Brand: ${bike.brand}<br>Color: ${bike.color}`;
 
         console.log(bike.color); // Black
-    </script>
 
+        // Methods as Properties
+        let student = {
+            name: "John",
+            age: 22,
+            greet: function() {
+                return `Hello, my name is ${this.name}.`;
+            }
+        };
+
+        document.getElementById("studentOutput").innerHTML = student.greet();
+        console.log(student.greet()); // Hello, my name is John.
+
+        // Getter and Setter Properties
+        let person = {
+            firstName: "Jane",
+            lastName: "Doe",
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            },
+            set fullName(name) {
+                let parts = name.split(" ");
+                this.firstName = parts[0];
+                this.lastName = parts[1];
+            }
+        };
+
+        console.log(person.fullName); // Jane Doe
+        person.fullName = "Alice Johnson";
+        console.log(person.fullName); // Alice Johnson
+        document.getElementById("personOutput").innerHTML = person.fullName;
+    </script>
 </body>
 </html>
