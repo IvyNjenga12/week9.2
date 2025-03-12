@@ -14,11 +14,9 @@
             price: 800,
             isNew: true
         };
-
-        console.log(laptop.brand); // Dell
-        console.log(laptop.price); // 800
-        console.log(laptop.isNew); // true
     </pre>
+    <p><strong>Output:</strong></p>
+    <p id="laptopOutput"></p>
 
     <h3>2. Computed Properties (Dynamic Properties)</h3>
     <p>Properties can be set dynamically using square brackets.</p>
@@ -28,9 +26,9 @@
             brand: "Yamaha",
             [key]: "Black"
         };
-
-        console.log(bike.color); // Black
     </pre>
+    <p><strong>Output:</strong></p>
+    <p id="bikeOutput"></p>
 
     <script>
         // Data Properties
@@ -39,6 +37,9 @@
             price: 800,
             isNew: true
         };
+
+        document.getElementById("laptopOutput").innerHTML = 
+            `Brand: ${laptop.brand}<br>Price: ${laptop.price}<br>Is New: ${laptop.isNew}`;
 
         console.log(laptop.brand); // Dell
         console.log(laptop.price); // 800
@@ -50,6 +51,9 @@
             brand: "Yamaha",
             [key]: "Black"
         };
+
+        document.getElementById("bikeOutput").innerHTML = 
+            `Brand: ${bike.brand}<br>Color: ${bike.color}`;
 
         console.log(bike.color); // Black
     </script>
