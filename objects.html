@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+    <meta charset="UTF-8">
     <title>JavaScript Object Properties</title>
 </head>
 <body>
-   <script>
+
+    <h2>Car Details</h2>
+    <p id="output"></p>
+
+    <script>
         let car = {
             make: "Toyota",
             model: "Corolla",
@@ -13,8 +17,12 @@
             speed: 120
         };
 
-        console.log(car); // Output the whole object
-        console.log(car.make); // Accessing a property
+        // Display the object properties on the webpage
+        document.getElementById("output").innerHTML = 
+            "Make: " + car.make + "<br>" +
+            "Model: " + car.model + "<br>" +
+            "Color: " + car.color + "<br>" +
+            "Speed: " + car.speed + " km/h";
     </script>
 
 </body>
